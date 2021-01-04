@@ -1,4 +1,5 @@
 1710. Maximum Units on a Truck
+```
 You are assigned to put some amount of boxes onto one truck. You are given a 2D array boxTypes, where boxTypes[i] = [numberOfBoxesi, numberOfUnitsPerBoxi]:
 
 numberOfBoxesi is the number of boxes of type i.
@@ -20,7 +21,7 @@ The total number of units will be = (1 * 3) + (2 * 2) + (1 * 1) = 8.
 Example 2:
 Input: boxTypes = [[5,10],[2,5],[4,7],[3,9]], truckSize = 10
 Output: 91
-
+```
 ```java
 public int maximumUnits(int[][] boxTypes, int truckSize) {
     Arrays.sort(boxTypes, (a, b) -> (b[1] - a[1]));
@@ -39,6 +40,7 @@ public int maximumUnits(int[][] boxTypes, int truckSize) {
 ```
 
 1711. Count Good Meals
+```
 A good meal is a meal that contains exactly two different food items with a sum of deliciousness equal to a power of two.
 
 You can pick any two different foods to make a good meal.
@@ -57,7 +59,7 @@ Example 2:
 Input: deliciousness = [1,1,1,3,3,3,7]
 Output: 15
 Explanation: The good meals are (1,1) with 3 ways, (1,3) with 9 ways, and (1,7) with 3 ways.
-
+```
 ```java
 public int countPairs(int[] deliciousness) {
     int res = 0, mod = 1000000007, max = 2 * (1 << 20);
@@ -73,13 +75,12 @@ public int countPairs(int[] deliciousness) {
 ```
 
 1712. Ways to Split Array Into Three Subarrays
+```
 A split of an integer array is good if:
 
 The array is split into three non-empty contiguous subarrays - named left, mid, right respectively from left to right.
 The sum of the elements in left is less than or equal to the sum of the elements in mid, and the sum of the elements in mid is less than or equal to the sum of the elements in right.
 Given nums, an array of non-negative integers, return the number of good ways to split nums. As the number may be too large, return it modulo 109 + 7.
-
- 
 
 Example 1:
 Input: nums = [1,1,1]
@@ -98,6 +99,7 @@ Example 3:
 Input: nums = [3,2,1]
 Output: 0
 Explanation: There is no good way to split nums.
+```
 ```java
 public int waysToSplit(int[] nums) {
     int[] preSum = new int[nums.length];
@@ -148,6 +150,7 @@ private int findLeft(int[] preSum, int sum, int rsum, int r) {
 ```
 
 1713. Minimum Operations to Make a Subsequence
+```
 You are given an array target that consists of distinct integers and another integer array arr that can have duplicates.
 
 In one operation, you can insert any integer at any position in arr. For example, if arr = [1,4,1,2], you can add 3 in the middle and make it [1,4,3,1,2]. Note that you can insert the integer at the very beginning or end of the array.
@@ -164,7 +167,7 @@ Explanation: You can add 5 and 1 in such a way that makes arr = [5,9,4,1,2,3,4],
 Example 2:
 Input: target = [6,4,8,1,3,2], arr = [4,7,6,2,3,8,6,1]
 Output: 3
-
+```
 ```java
 public int minOperations(int[] target, int[] arr) {
     Map<Integer, Integer> map = new HashMap<>();
